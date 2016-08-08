@@ -1,0 +1,10 @@
+#!/bin/bash
+
+#sv start socklog-unix || exit 1
+
+source /etc/envvars
+env
+
+cd /example/target
+exec 2>&1
+exec java -jar gs-spring-boot-0.1.0.jar
