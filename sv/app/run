@@ -3,8 +3,8 @@
 #sv start socklog-unix || exit 1
 
 source /etc/envvars
-env
 
-cd /example/target
+cd /app
+
 exec 2>&1
-exec java -jar gs-spring-boot-0.1.0.jar
+exec java ${JAVA_OPTS} -jar app.jar ${JAVA_ARGS}
